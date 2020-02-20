@@ -5,6 +5,7 @@ body, html {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
+  background: #3B3330;
 }
 
 a {
@@ -171,11 +172,11 @@ a:hover {
 }
 
 .home-bg {
-  animation: 2s ease-out 0s 1 slideInFromLeft;
+
   position: relative;
   /* The image used */
+  background: #3B3330;
   background-image: url("../img/bg_1.jpg");
-
   /* Full height */
   height: 100%; 
 
