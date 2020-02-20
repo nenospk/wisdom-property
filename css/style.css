@@ -143,24 +143,31 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.motto-1 {
+.motto {
   color: white;
   font-size: 100px !important;
+}
+
+.motto-1 {
   position: absolute;
-  margin-left: -300px;
   right: 0;
   top: 35%;
   left: 50%;
 }
 
 .motto-2 {
-  color: white;
-  font-size: 100px !important;
   position: absolute;
-  margin-left: -20px;
   right: 0;
   top: 55%;
   left: 50%;
+}
+
+.motto-3 {
+  padding-top: 60px;
+}
+
+.motto-4 {
+  padding-top: 40px;
 }
 
 .home-bg {
@@ -293,6 +300,7 @@ a:hover {
   color: #3B3330;
   border: 1px solid #3B3330;
   margin-bottom: 5px;
+  cursor: pointer; 
 }
 
 .floor-selected {
@@ -306,6 +314,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .motto {
+    font-size: 50px !important;
+  }
+
   .motto-1 {
     margin-left: -100px;
     font-size: 50px !important;
@@ -318,6 +330,14 @@ a:hover {
     font-size: 50px !important;
     top: 55%;
     left: 50%;
+  }
+
+  .motto-3 {
+    padding-top: 120px;
+  }
+
+  .motto-4 {
+    padding-top: 40px;
   }
 
   .logo_nav {
