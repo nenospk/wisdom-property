@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  background: #3B3330;
+  background: #3e3431;
 }
 
 a {
@@ -76,7 +76,6 @@ a:hover {
 }
 
 .logo_nav li {
-  animation: 1s ease 0s 1 slideDownFromTop;
   font-size: 16px;
   display: inline-block;  
   padding: 25px 20px 25px 20px;
