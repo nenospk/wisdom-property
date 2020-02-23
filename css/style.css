@@ -145,6 +145,7 @@ a:hover {
 
 .motto {
   color: white;
+  text-shadow: -3px 1px 4px rgba(150, 150, 150, 1);
   font-size: 100px !important;
 }
 
@@ -407,6 +408,10 @@ a:hover {
 
   .slide-indicator {
     display: block;
+  }
+
+  .info-detail {
+    text-align: center;
   }
 }
 
