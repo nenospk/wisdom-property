@@ -58,128 +58,149 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.css" />
-		<link rel="stylesheet" type="text/css" href="css/lightgallery.css" /> 
+		<link rel="stylesheet" type="text/css" href="css/lightgallery.css" />
+		<link rel="stylesheet" href="css/paver.css" />
 
 		<style type="text/css">
-			.gallery-container { display: flex; margin-right: 0; align-items: center; justify-content: center; margin-top: 15px; margin-bottom: 15px;}
-.demo-gallery { display: flex; overflow-x: auto;}
-.demo-gallery::-webkit-scrollbar { display: none;}
+			.panorama {
+				height: 400px;
+				overflow-x: scroll;
+				overflow-y: hidden;
+			}
+			.panorama img {
+				height: 100%;
+			}
+			.gallery-container {
+				display: flex;
+				margin-right: 0;
+				align-items: center;
+				justify-content: center;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			.demo-gallery {
+				display: flex;
+				overflow-x: auto;
+			}
+			.demo-gallery::-webkit-scrollbar {
+				display: none;
+			}
 
-.demo-gallery > ul {
-  margin-bottom: 0;
-  cursor: pointer;
-  flex-shrink: 0;
-  padding: 15px 25px;
-}
-.demo-gallery > ul > li {
-  float: left;
-  width: 200px;
-  height: 100px;
-}
-.demo-gallery > ul > li a {
-  border: 3px solid #FFF;
-  border-radius: 3px;
-  display: block;
-  overflow: hidden;
-  position: relative;
-}
-.demo-gallery > ul > li a > img {
-  -webkit-transition: -webkit-transform 0.15s ease 0s;
-  -moz-transition: -moz-transform 0.15s ease 0s;
-  -o-transition: -o-transform 0.15s ease 0s;
-  transition: transform 0.15s ease 0s;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  height: 100%;
-  width: 100%;
-}
-.demo-gallery > ul > li a:hover > img {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1);
-  transform: scale3d(1.1, 1.1, 1.1);
-}
-.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
-  opacity: 1;
-}
-.demo-gallery > ul > li a .demo-gallery-poster {
-  background-color: rgba(0, 0, 0, 0.1);
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transition: background-color 0.15s ease 0s;
-  -o-transition: background-color 0.15s ease 0s;
-  transition: background-color 0.15s ease 0s;
-}
-.demo-gallery > ul > li a .demo-gallery-poster > img {
-  left: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
-}
-.demo-gallery > ul > li a:hover .demo-gallery-poster {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.demo-gallery .justified-gallery > a > img {
-  -webkit-transition: -webkit-transform 0.15s ease 0s;
-  -moz-transition: -moz-transform 0.15s ease 0s;
-  -o-transition: -o-transform 0.15s ease 0s;
-  transition: transform 0.15s ease 0s;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  height: 100%;
-  width: 100%;
-}
-.demo-gallery .justified-gallery > a:hover > img {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1);
-  transform: scale3d(1.1, 1.1, 1.1);
-}
-.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
-  opacity: 1;
-}
-.demo-gallery .justified-gallery > a .demo-gallery-poster {
-  background-color: rgba(0, 0, 0, 0.1);
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transition: background-color 0.15s ease 0s;
-  -o-transition: background-color 0.15s ease 0s;
-  transition: background-color 0.15s ease 0s;
-}
-.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
-  left: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
-}
-.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.demo-gallery .video .demo-gallery-poster img {
-  height: 48px;
-  margin-left: -24px;
-  margin-top: -24px;
-  opacity: 0.8;
-  width: 48px;
-}
-.demo-gallery.dark > ul > li a {
-  border: 3px solid #04070a;
-}
-.home .demo-gallery {
-  padding-bottom: 80px;
-}
+			.demo-gallery > ul {
+				margin-bottom: 0;
+				cursor: pointer;
+				flex-shrink: 0;
+				padding: 15px 25px;
+			}
+			.demo-gallery > ul > li {
+				float: left;
+				width: 200px;
+				height: 100px;
+			}
+			.demo-gallery > ul > li a {
+				border: 3px solid #fff;
+				border-radius: 3px;
+				display: block;
+				overflow: hidden;
+				position: relative;
+			}
+			.demo-gallery > ul > li a > img {
+				-webkit-transition: -webkit-transform 0.15s ease 0s;
+				-moz-transition: -moz-transform 0.15s ease 0s;
+				-o-transition: -o-transform 0.15s ease 0s;
+				transition: transform 0.15s ease 0s;
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+				height: 100%;
+				width: 100%;
+			}
+			.demo-gallery > ul > li a:hover > img {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1);
+				transform: scale3d(1.1, 1.1, 1.1);
+			}
+			.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+				opacity: 1;
+			}
+			.demo-gallery > ul > li a .demo-gallery-poster {
+				background-color: rgba(0, 0, 0, 0.1);
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				-webkit-transition: background-color 0.15s ease 0s;
+				-o-transition: background-color 0.15s ease 0s;
+				transition: background-color 0.15s ease 0s;
+			}
+			.demo-gallery > ul > li a .demo-gallery-poster > img {
+				left: 50%;
+				margin-left: -10px;
+				margin-top: -10px;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				-webkit-transition: opacity 0.3s ease 0s;
+				-o-transition: opacity 0.3s ease 0s;
+				transition: opacity 0.3s ease 0s;
+			}
+			.demo-gallery > ul > li a:hover .demo-gallery-poster {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			.demo-gallery .justified-gallery > a > img {
+				-webkit-transition: -webkit-transform 0.15s ease 0s;
+				-moz-transition: -moz-transform 0.15s ease 0s;
+				-o-transition: -o-transform 0.15s ease 0s;
+				transition: transform 0.15s ease 0s;
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+				height: 100%;
+				width: 100%;
+			}
+			.demo-gallery .justified-gallery > a:hover > img {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1);
+				transform: scale3d(1.1, 1.1, 1.1);
+			}
+			.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+				opacity: 1;
+			}
+			.demo-gallery .justified-gallery > a .demo-gallery-poster {
+				background-color: rgba(0, 0, 0, 0.1);
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				-webkit-transition: background-color 0.15s ease 0s;
+				-o-transition: background-color 0.15s ease 0s;
+				transition: background-color 0.15s ease 0s;
+			}
+			.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+				left: 50%;
+				margin-left: -10px;
+				margin-top: -10px;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				-webkit-transition: opacity 0.3s ease 0s;
+				-o-transition: opacity 0.3s ease 0s;
+				transition: opacity 0.3s ease 0s;
+			}
+			.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			.demo-gallery .video .demo-gallery-poster img {
+				height: 48px;
+				margin-left: -24px;
+				margin-top: -24px;
+				opacity: 0.8;
+				width: 48px;
+			}
+			.demo-gallery.dark > ul > li a {
+				border: 3px solid #04070a;
+			}
+			.home .demo-gallery {
+				padding-bottom: 80px;
+			}
 		</style>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -203,7 +224,6 @@
 				"sameAs": ["https://www.facebook.com/888wisdomproperty"]
 			}
 		</script>
-
 	</head>
 	<body>
 		<div class="go-top">
@@ -335,7 +355,11 @@
 				<div class="hori">
 					<div class="hori-card">
 						<div class="sub">
-							<img src="img/new/section-concept-1.jpg" width="400" alt="concept" />
+							<img
+								src="img/new/section-concept-1.jpg"
+								width="400"
+								alt="concept"
+							/>
 							<h3 style="margin-top: 10px;">SMART LIVING&WORKING</h3>
 							<div id="metrics-all" style="width: 400px;">
 								อาคาร 5 ชั้นแบบ Openspace และการแบ่งพื้นที่ได้อย่างลงตัว
@@ -347,7 +371,11 @@
 
 					<div class="hori-card">
 						<div class="sub">
-							<img src="img/new/section-concept-3.jpg" width="400" alt="concept" />
+							<img
+								src="img/new/section-concept-3.jpg"
+								width="400"
+								alt="concept"
+							/>
 							<h3 style="margin-top: 10px;">CONVENIENT LIFE</h3>
 							<div id="metrics-all" style="width: 400px;">
 								ตั้งอยู่บนมาบตาพุด "ทำเลกองแห่งอนาคต"
@@ -358,7 +386,11 @@
 
 					<div class="hori-card">
 						<div class="sub">
-							<img src="img/new/section-concept-2.jpg" width="400" alt="concept" />
+							<img
+								src="img/new/section-concept-2.jpg"
+								width="400"
+								alt="concept"
+							/>
 							<h3 style="margin-top: 10px;">INNOVTIVE LUXURY</h3>
 							<div id="metrics-all" style="width: 400px;">
 								เรียบหรูแต่คล่องตัวภายในมีความทันสมัยและดีไซน์หรูเหนือระดับด้วยผนังกระจกหน้าอาคารเพื่อความรู้สึกปลอดโปร่งและผ่อนคลาย
@@ -379,55 +411,97 @@
 			<div class="topic-brown" style="margin-bottom: -5px;">
 				<h4>Gallery</h4>
 			</div>
+
 			<div class="gallery-container">
 				<div class="demo-gallery">
-		            <ul id="lightgallery" class="list-unstyled">
-		                <li data-responsive="img/img/1-375.jpg 375, img/img/1-480.jpg 480" data-src="img/img/1-1600.jpg" data-sub-html="<h4>Room 1</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-1.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/2-375.jpg 375, img/img/2-480.jpg 480" data-src="img/img/2-1600.jpg" data-sub-html="<h4>Room 2</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-2.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/3-375.jpg 375, img/img/3-480.jpg 480" data-src="img/img/3-1600.jpg" data-sub-html="<h4>Room 3</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-3.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/4-375.jpg 375, img/img/4-480.jpg 480" data-src="img/img/4-1600.jpg" data-sub-html="<h4>Room 4</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-4.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/5-375.jpg 375, img/img/5-480.jpg 480" data-src="img/img/5-1600.jpg" data-sub-html="<h4>Room 5</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-5.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/6-375.jpg 375, img/img/6-480.jpg 480" data-src="img/img/6-1600.jpg" data-sub-html="<h4>Room 6</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-6.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/7-375.jpg 375, img/img/7-480.jpg 480" data-src="img/img/7-1600.jpg" data-sub-html="<h4>Room 7</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-7.jpg">
-		                    </a>
-		                </li>
-		                <li data-responsive="img/img/8-375.jpg 375, img/img/8-480.jpg 480" data-src="img/img/8-1600.jpg" data-sub-html="<h4>Room 8</h4><p></p>">
-		                    <a href="">
-		                        <img class="img-responsive" src="img/img/thumb-8.jpg">
-		                    </a>
-		                </li>
-		            </ul>
-		        </div>
-	        </div>
+					<ul id="lightgallery" class="list-unstyled">
+						<li
+							data-responsive="img/img/1-375.jpg 375, img/img/1-480.jpg 480"
+							data-src="img/img/1-1600.jpg"
+							data-sub-html="<h4>Room 1</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-1.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/2-375.jpg 375, img/img/2-480.jpg 480"
+							data-src="img/img/2-1600.jpg"
+							data-sub-html="<h4>Room 2</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-2.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/3-375.jpg 375, img/img/3-480.jpg 480"
+							data-src="img/img/3-1600.jpg"
+							data-sub-html="<h4>Room 3</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-3.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/4-375.jpg 375, img/img/4-480.jpg 480"
+							data-src="img/img/4-1600.jpg"
+							data-sub-html="<h4>Room 4</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-4.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/5-375.jpg 375, img/img/5-480.jpg 480"
+							data-src="img/img/5-1600.jpg"
+							data-sub-html="<h4>Room 5</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-5.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/6-375.jpg 375, img/img/6-480.jpg 480"
+							data-src="img/img/6-1600.jpg"
+							data-sub-html="<h4>Room 6</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-6.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/7-375.jpg 375, img/img/7-480.jpg 480"
+							data-src="img/img/7-1600.jpg"
+							data-sub-html="<h4>Room 7</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-7.jpg" />
+							</a>
+						</li>
+						<li
+							data-responsive="img/img/8-375.jpg 375, img/img/8-480.jpg 480"
+							data-src="img/img/8-1600.jpg"
+							data-sub-html="<h4>Room 8</h4><p></p>"
+						>
+							<a href="">
+								<img class="img-responsive" src="img/img/thumb-8.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-	        <div class="slide-indicator" style="color: #3b3330;"><<< Swipe</div>
+			<div class="slide-indicator" style="color: #3b3330;"><<< Swipe</div>
 
+			<div class="topic-brown" style="margin-bottom: -5px;">
+				<h4>Panorama view from our site</h4>
+			</div>
+
+			<figure>
+				<div class="panorama">
+					<img src="img/panorama.jpg" title="wso-panorama" alt="wso-panorama" />
+				</div>
+			</figure>
 		</div>
 
 		<div class="highlight-bg" style="padding-bottom: 10px;">
@@ -598,12 +672,16 @@
 		<div class="footer">888 WISDOM PROPERTY</div>
 
 		<script type="text/javascript">
-        $(document).ready(function(){
-            $('#lightgallery').lightGallery();
-        });
-        </script>
-        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-        <script src="js/lightgallery-all.min.js"></script>
-        <script src="js/jquery.mousewheel.min.js"></script>
+			$(document).ready(function () {
+				$("#lightgallery").lightGallery();
+				$(".panorama").paver();
+			});
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+		<script src="js/lightgallery-all.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+		<script type="text/javascript" src="js/jquery.paver.min.js"></script>
 	</body>
 </html>
