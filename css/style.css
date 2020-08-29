@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");
+@font-face {
+	font-family: Antique;
+	src: url("../fonts/Antique.otf");
+}
 
 body,
 html {
@@ -789,12 +793,13 @@ button {
 		rgba(195, 148, 70, 1) 31%,
 		rgba(246, 233, 132, 1) 100%
 	);
-	margin-left: -91px;
+	margin-left: -76px;
 	bottom: 70px;
 	left: 50%;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 	cursor: pointer;
 	outline: none;
+	font-family: Antique;
 }
 
 .event-register a {
@@ -813,7 +818,8 @@ button {
 	margin-top: 15px;
 	text-align: center;
 	color: #cfb370;
-	font-size: 18px;
+	font-size: 20px;
+	font-family: Antique;
 }
 
 .soft-opening-schedule {
@@ -825,12 +831,18 @@ button {
 	text-align: center;
 	border: none;
 	color: #cfb370;
+	font-family: Antique;
+	font-size: 18px;
 }
 
 .table-bordered thead td,
 .table-bordered thead th,
 .table-bordered td {
 	border-color: #cfb370;
+}
+
+.table-bordered thead th {
+	border-right: none;
 }
 
 .table-bordered td,
@@ -865,6 +877,8 @@ button {
 
 .dress-code {
 	color: #cfb370;
+	font-family: Antique;
+	font-size: 18px;
 }
 
 .myschedule {
@@ -872,8 +886,10 @@ button {
 }
 
 .myschedule h5 {
-	color: #dcbd76;
+	color: #cfb370;
 	margin-bottom: 15px;
+	font-family: Antique;
+	font-size: 24px;
 }
 
 .mymap {
@@ -886,6 +902,7 @@ button {
 }
 
 .event-register-popup {
+	font-family: Antique;
 	color: #3b3330;
 	display: inline-block;
 	padding: 8px 25px;
@@ -932,8 +949,9 @@ button {
 	margin-top: 10px;
 	text-align: center;
 	color: #cfb370;
-	font-size: 18px;
 	max-width: 500px;
+	font-family: Antique;
+	font-size: 20px;
 }
 
 .button-1-event {
@@ -989,7 +1007,7 @@ button {
 		margin-top: 30px;
 		text-align: center;
 		color: #cfb370;
-		font-size: 15px;
+		font-size: 19px;
 	}
 
 	.myschedule {
@@ -1066,7 +1084,7 @@ button {
 	.event-eng-popup {
 		margin: 0 auto;
 		margin-top: 10px;
-		font-size: 15px;
+		font-size: 17px;
 	}
 
 	.soft-index {
@@ -1109,4 +1127,9 @@ button {
 	.overlay-content {
 		top: 12%;
 	}
+}
+
+.table td,
+.table th {
+	vertical-align: middle;
 }
