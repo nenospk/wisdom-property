@@ -396,7 +396,7 @@
 				var myForm = new FormData(form2);
 				console.log(myForm);
 				myForm.append("Timestamp", new Date().toLocaleString());
-				//$("#signup-form-2").toggle();
+				$("#signup-form-2").toggle();
 				fetch(scriptURL, { method: "POST", body: myForm })
 					.then((response) => {
 						//console.log(response);
