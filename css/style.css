@@ -252,6 +252,8 @@ a:hover {
 }
 
 .button-1-event a {
+	font-size: 22px;
+	font-family: Antique;
 	color: #3b3330 !important;
 }
 
@@ -965,8 +967,8 @@ button {
 		rgba(195, 148, 70, 1) 31%,
 		rgba(246, 233, 132, 1) 100%
 	);
-	margin-left: -115px;
-	bottom: 80px;
+	margin-left: -93px;
+	bottom: 70px;
 	left: 50%;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 	cursor: pointer;
@@ -1110,7 +1112,7 @@ button {
 	.button-1-event {
 		padding: 10px 20px;
 		bottom: 40px;
-		margin-left: -95px;
+		margin-left: -93px;
 	}
 
 	.event-register-popup {

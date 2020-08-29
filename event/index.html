@@ -394,7 +394,7 @@
 				e.preventDefault();
 				$(".form-msg-2").html("กำลังลงทะเบียน...");
 				var myForm = new FormData(form2);
-				console.log(myForm);
+				//console.log(myForm);
 				myForm.append("Timestamp", new Date().toLocaleString());
 				$("#signup-form-2").toggle();
 				fetch(scriptURL, { method: "POST", body: myForm })
