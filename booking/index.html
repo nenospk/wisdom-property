@@ -348,8 +348,13 @@
 						class="container"
 						style="padding-top: 25px; padding-bottom: 50px"
 					>
+						<!--
 						<div style="margin-bottom: 5px" class="fill-info">
 							* กรุณาเลือก Unit และกรอกข้อมูล
+						</div>-->
+						<div style="margin-bottom: 5px" class="fill-info">
+							Unit ที่เลือก :
+							<label class="selected_confirm">กรุณาเลือก unit ที่สนใจ</label>
 						</div>
 						<div>
 							<input
@@ -638,6 +643,23 @@
 							);
 							*/
 			//addReserveData("nene", "suppakit.neno@gmail.com", "0945597193", "unit_8");
+
+			$(document).ready(function () {
+				//set initial state.
+				$("input[name=unit]").change(function () {
+					//console.log("a");
+					if (!$("input[name=unit]:checked").val()) {
+						$(".selected_confirm").html("กรุณาเลือก unit ที่สนใจ");
+					} else {
+						var selected_unit = $(":checkbox:checked")
+							.map(function () {
+								return $(this).val();
+							})
+							.get();
+						$(".selected_confirm").html(selected_unit.toString());
+					}
+				});
+			});
 
 			//const scriptURL =
 			("https://script.google.com/macros/s/AKfycbykam4L_0jXuBG9sg7gicrPDtoFSlQgsE_vGFG7mN9hKoGvT4hY/exec");
