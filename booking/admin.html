@@ -118,14 +118,14 @@
 				>
 					<div class="unit-container">
 						<div class="unit-selector">
-							<div class="unit-each">
+							<div class="unit-each reserved-default">
 								<input type="checkbox" name="unit" id="unit_1" value="unit_1" />
 								<label for="unit_1"
 									><img src="../img/countdown/layoutperunit-01.png" />
 								</label>
 								<span id="unit_1">loading...</span>
 							</div>
-							<div class="unit-each">
+							<div class="unit-each reserved-default">
 								<input type="checkbox" name="unit" id="unit_2" value="unit_2" />
 								<label for="unit_2"
 									><img src="../img/countdown/layoutperunit-02.png" /> </label
@@ -571,7 +571,7 @@
 					);
 			}
 
-			var ref_lead = firebase.database().ref("lead/");
+			var ref_lead = firebase.database().ref("lead/").orderByChild("fbTime");
 			ref_lead.on(
 				"value",
 				function (snapshot) {
@@ -610,7 +610,10 @@
 				}
 			);
 
-			var ref_interest = firebase.database().ref("interest/");
+			var ref_interest = firebase
+				.database()
+				.ref("interest/")
+				.orderByChild("fbTime");
 			ref_interest.on(
 				"value",
 				function (snapshot) {
@@ -685,7 +688,10 @@
 				}
 			);
 
-			var ref_reserve = firebase.database().ref("reserve/");
+			var ref_reserve = firebase
+				.database()
+				.ref("reserve/")
+				.orderByChild("fbTime");
 			ref_reserve.on(
 				"value",
 				function (snapshot) {
