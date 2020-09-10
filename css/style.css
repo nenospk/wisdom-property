@@ -656,7 +656,10 @@ a:hover {
 
 .sign-up-form select,
 .sign-up-form input,
-.sign-up-form input:focus {
+.sign-up-form input:focus,
+.countdown-content input[type="text"],
+.countdown-content input[type="number"],
+.countdown-content select {
 	display: block;
 	border-radius: 0 !important;
 	border: 2px solid #dcbd76;
@@ -676,7 +679,9 @@ button {
 	outline: none;
 }
 
-.sign-up-form input::placeholder {
+.sign-up-form input::placeholder,
+.countdown-content input[type="text"]::placeholder,
+.countdown-content input[type="number"]::placeholder {
 	color: white;
 }
 .sign-up-form input:-ms-input-placeholder,
@@ -684,12 +689,15 @@ button {
 	color: white;
 }
 
-.sign-up-form input[type="submit"] {
+.sign-up-form input[type="submit"],
+.countdown-content input[type="submit"] {
 	border-radius: 0 !important;
 	border: 2px solid #dcbd76;
 	background: #dcbd76;
 	color: white;
 	padding: 15px 30px;
+	width: 100%;
+	max-width: 400px;
 }
 
 .form-msg,
@@ -1134,4 +1142,158 @@ button {
 .table td,
 .table th {
 	vertical-align: middle;
+}
+
+/* Countdown */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+input[name="unit"] {
+	display: inline-block;
+	-webkit-appearance: none;
+}
+
+input[name="unit"]:checked + label {
+	border: 5px solid #dec077;
+}
+
+.unit-selector label {
+	display: inline-block;
+	width: 75px;
+	height: auto;
+	border: 5px solid #fff;
+	margin: auto;
+}
+
+.unit-selector label img {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.unit-selector span {
+	display: block;
+	text-align: center;
+}
+
+.unit-each {
+	display: inline-block;
+}
+
+.reserved {
+	opacity: 0.4;
+}
+
+.unit-container {
+	display: flex;
+	margin-right: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.unit-selector {
+	display: flex;
+	overflow-x: auto;
+}
+.unit-selector::-webkit-scrollbar {
+	display: none;
+}
+.unit-each {
+	cursor: pointer;
+	flex-shrink: 0;
+	padding: 0;
+}
+
+.countdown-event-bg {
+	position: relative;
+	/* The image used */
+	background: #4a413f;
+	/*background-image: url("../img/event/event-bg.png");*/
+	/* Full height */
+	height: auto;
+	width: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.countdown-content {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+	text-align: center;
+}
+
+.stat .col-sm-3 {
+	border: 1px solid #eee;
+	padding: 15px 30px;
+}
+
+.welcome {
+	display: table-cell;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.checkin-step .col-sm-4:last-child {
+	margin-right: 20px;
+}
+
+.checkin-step {
+	display: flex;
+	margin-right: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkin-hori {
+	display: flex;
+	overflow-x: auto;
+}
+.checkin-hori::-webkit-scrollbar {
+	display: none;
+}
+.checkin-card {
+	display: block;
+	cursor: pointer;
+	flex-shrink: 0;
+	padding: 25px 40px;
+	border: 3px solid #dec077;
+	border-radius: 35px;
+	background: #4a413f;
+	margin: 40px 30px;
+	width: 450px;
+	color: white;
+	height: 100%;
+}
+
+.button-checkin {
+	color: white;
+	display: inline-block;
+	padding: 20px 40px;
+	background: rgb(195, 148, 70);
+	background: linear-gradient(
+		66deg,
+		rgba(195, 148, 70, 1) 31%,
+		rgba(246, 233, 132, 1) 100%
+	);
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	outline: none;
 }
