@@ -1164,6 +1164,7 @@ input[name="unit"] {
 
 input[name="unit"]:checked + label {
 	border: 5px solid #dec077;
+	background: rgba(255, 4, 0, 0.5);
 }
 
 .unit-selector label {
@@ -1190,7 +1191,11 @@ input[name="unit"]:checked + label {
 }
 
 .reserved {
-	opacity: 0.4;
+	opacity: 0.2;
+}
+
+.reserved-default {
+	opacity: 0.2;
 }
 
 .unit-container {
@@ -1273,14 +1278,15 @@ input[name="unit"]:checked + label {
 	display: block;
 	cursor: pointer;
 	flex-shrink: 0;
-	padding: 25px 40px;
+	padding: 25px 25px;
 	border: 3px solid #dec077;
 	border-radius: 35px;
 	background: #4a413f;
-	margin: 40px 30px;
-	width: 450px;
+	/*margin: 40px 30px;*/
+	width: 100%;
 	color: white;
-	height: 100%;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 .button-checkin {
@@ -1296,4 +1302,112 @@ input[name="unit"]:checked + label {
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 	cursor: pointer;
 	outline: none;
+}
+
+.special-price {
+	color: white;
+	display: inline-block;
+	padding: 1px 10px;
+	background: rgb(195, 148, 70);
+	background: linear-gradient(
+		66deg,
+		rgba(195, 148, 70, 1) 31%,
+		rgba(246, 233, 132, 1) 100%
+	);
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	outline: none;
+}
+
+#all_reserve {
+	font-size: 190px;
+	color: #dec077;
+	margin-top: -55px;
+}
+
+#timer {
+	font-size: 55px;
+	color: #dec077;
+	margin-top: -10px;
+}
+
+.golden {
+	color: #dec077;
+}
+
+.unit-each span {
+	font-size: 14px;
+	margin-left: 6px;
+	background: #dec077;
+}
+
+.unit-left-count {
+}
+
+.time-remain {
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: left;
+	padding: 20px;
+	border-bottom-right-radius: 25px;
+	background: #2b2523;
+	color: #fff;
+	min-width: 245px;
+	padding-bottom: 5px;
+}
+
+.hr-mobile {
+	margin-bottom: 140px";
+}
+
+.success-popup {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	bottom: 0;
+	width: 350px;
+	height: 150px;
+	margin-top: -125px;
+	margin-left: -175px;
+	z-index: 100;
+	padding: 20px;
+	background-color: white;
+	text-align: center;
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.time-remain {
+		padding-bottom: 20px;
+		position: fixed;
+		width: 100%;
+		border-bottom-right-radius: 0;
+		text-align: center;
+	}
+
+	#timer {
+		font-size: 16px !important;
+	}
+
+	.time-remain div {
+		display: inline-block;
+	}
+
+	.pricing-label {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 14px !important;
+	}
+
+	.margin-mobile {
+		padding-top: 85px !important;
+	}
+
+	.hr-mobile {
+		margin-bottom: 0;
+	}
+	.fill-info {
+		text-align: left;
+	}
 }
