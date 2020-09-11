@@ -1339,6 +1339,7 @@ input[name="unit"]:checked + label {
 	font-size: 14px;
 	margin-left: 6px;
 	background: #dec077;
+	color: black;
 }
 
 .unit-left-count {
